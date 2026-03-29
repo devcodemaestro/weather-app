@@ -89,14 +89,15 @@ function App() {
       }}
     >
       {loading ? (
-        <ClipLoader
-          color="#0e0b0a"
-          loading={loading}
-          size={150}
-          aria-label="Loading Spinner"
-          data-testid="loader"
-          className="container"
-        />
+        <div className="container">
+          <ClipLoader
+            color="#0e0b0a"
+            loading={loading}
+            size={150}
+            aria-label="Loading Spinner"
+            data-testid="loader"
+          />
+        </div>
       ) : !apiError ? (
         <div className="container">
           <WeatherBox weather={weather} cityName={cityName} />
